@@ -145,6 +145,12 @@ By default, optimization steps are performed if the number of elements in a mode
 2.  Navigate to the directory for the management utilities. Typically, the location of this directory is %ProgramFiles%\\Microsoft Dynamics AX\\60\\ManagementUtilities.
 
 3.  At the command prompt, type the following command, and then press ENTER.
+
+        axutil schema /schemaname:TemporarySchema /db:databasename_model
+        
+    This command create a new Schema name as "TemporySchema"
+
+4.  At the command prompt, type the following command, and then press ENTER.
     
         axutil importstore /file:filename /schemaname:name /verbose
     
@@ -156,9 +162,9 @@ By default, optimization steps are performed if the number of elements in a mode
 
 
 
-4.  Drain the client connections that are connected to the AOS instance that you are working with. For more information, see [Drain users from an AOS](drain-users-from-an-aos.md).
+5.  Drain the client connections that are connected to the AOS instance that you are working with. For more information, see [Drain users from an AOS](drain-users-from-an-aos.md).
 
-5.  At the command prompt, type the following command, and then press ENTER.
+6.  At the command prompt, type the following command, and then press ENTER.
     
         axutil importstore /apply /schemaname:TemporarySchema /verbose 
     
